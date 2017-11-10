@@ -7,7 +7,7 @@
 % https://www.ctan.org/tex-archive/macros/latex/contrib/moderntimeline
 % https://www.ctan.org/tex-archive/macros/latex/contrib/moderncv
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\title{Curriculum Vitae}
+%\title{Curriculum Vitae SandBox}
 \documentclass[11pt, a4paper, roman]{moderncv}
 \moderncvstyle{classic}
 \moderncvcolor{blue} 
@@ -15,7 +15,7 @@
 \usepackage{tabularx}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[scale=0.85]{geometry}    % Width of the entire CV
+\usepackage[scale=0.85, top=2cm]{geometry}    % Width of the entire CV
 \setlength{\hintscolumnwidth}{2.2cm} % Width of the timeline on your left
 \usepackage{mathptmx}
 \usepackage{pdfpages/pdfpages}
@@ -27,7 +27,10 @@
 \usepackage[none]{hyphenat}
 
 \usepackage{lastpage}
+%\lhead{\addressfont\itshape{UW-Madison Department of Computer Sciences}}
+\lhead{\addressfont\itshape{Masters Program, MILA, Université de Montréal}}
 
+%\rhead{\addressfont\itshape{\textbf{U-M ID: 51481037}}}
 \rfoot{\addressfont\itshape{Page \thepage\ }}
 
 \usepackage{array}
@@ -67,6 +70,7 @@
 \begin{document}
 \pagenumbering{arabic}
 \makecvtitle
+\vspace*{-5mm}
 
 \section{Interests}
 \cventry{}{Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Algorithm Design, Reinforcement Learning}{}{}{}{}
@@ -80,66 +84,83 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Academic Research Experience}
-\cventry{Dec,2015 - Present}{Research Assistant}{\textsc{Institute of Mathematical Sciences, Chennai, India}}{}{}{
-\textbf{Optical Character Recognition on Indus Scripts} \href{https://github.com/tpsatish95/indus-script-ocr}{{\color{blue!70}{[link]}}}
+\cventry{Dec,2015 - Present}{Research Assistant}{\textsc{Institute of Mathematical Sciences, Chennai}}{}{}{
+\textbf{Optical Character Recognition on Indus Scripts} \href{https://github.com/tpsatish95/indus-script-ocr}{{\color{blue!70}{[link]}}} \href{https://arxiv.org/abs/1702.00523}{\color{blue!70}{[paper]}}
 \newline
 under Prof. Ronojoy Adhikari, Department of Physics
 \begin{itemize}
 \item To recognize Indus script symbols from scans and photographs of ancient Harappan civilization artifacts.
-\item Techniques: Convolutional Neural Networks (CNN), GoogLeNet, Selective Search, and Transfer Learning.
-\item This work got featured in \href{http://www.thehindu.com/sci-tech/science/chennai-team-taps-ai-to-read-indus-script/article17448690.ece}{{\color{blue!70}{\textit{The Hindu}}}}, \href{https://www.theverge.com/2017/1/25/14371450/indus-valley-civilization-ancient-seals-symbols-language-algorithms-ai\#EQQA6r}{{\color{blue!70}{\textit{The Verge}}}} (small piece), \href{http://timesofindia.indiatimes.com/city/chennai/app-may-help-decipher-indus-valley-symbols/articleshow/57281369.cms}{{\color{blue!70}{\textit{Times of India}}}}, and \href{http://www.sbs.com.au/yourlanguage/tamil/en/content/app-decipher-ancient-symbols?language=en}{{\color{blue!70}{\textit{SBS Radio - Australia}}}}.
+\item \textbf{Techniques:} Convolutional Neural Networks (CNN), GoogLeNet, Selective Search, and Transfer Learning.
+\item \textbf{Media Coverage:} \href{http://www.thehindu.com/sci-tech/science/chennai-team-taps-ai-to-read-indus-script/article17448690.ece}{{\color{blue!70}{\textit{The Hindu}}}}, \href{https://www.theverge.com/2017/1/25/14371450/indus-valley-civilization-ancient-seals-symbols-language-algorithms-ai\#EQQA6r}{{\color{blue!70}{\textit{The Verge}}}} (small piece), \href{http://timesofindia.indiatimes.com/city/chennai/app-may-help-decipher-indus-valley-symbols/articleshow/57281369.cms}{{\color{blue!70}{\textit{Times of India}}}}, and \href{http://www.sbs.com.au/yourlanguage/tamil/en/content/app-decipher-ancient-symbols?language=en}{{\color{blue!70}{\textit{SBS Radio - Australia}}}}.
 \end{itemize}}
 
-\cventry{Dec,2014}{Research Intern}{IPTSE Winter School, \textsc{Carnegie Mellon University}}{at NIT Surathkal}{}{
+\cventry{Dec,2014}{Research Intern}{\textsc{Carnegie Mellon University (IPTSE Winter School)}}{}{}{
 \textbf{Text Based Emotion Recognition System} \href{https://github.com/tpsatish95/emotion-detection-from-text}{\color{blue!70}{[link]}}
 \newline
-under Prof. Bhiksha Raj, Department of Computer Science
+under Prof. Bhiksha Raj and Prof. Rita Singh, Department of Computer Science
 \begin{itemize}
 \item Classify any textual data, using histograms of word2vec word/phrase clusters, into the 7 basic emotions.
-\item Techniques: Word2Vec, Latent Dirichlet Allocation (LDA), K-means, Support Vector Machines (SVM), Probabilistic N-Gram models, Multinomial Naive Bayes.
+\item \textbf{Techniques:} Word2Vec, Latent Dirichlet Allocation (LDA), K-means, Support Vector Machines (SVM), Probabilistic N-Gram models, Multinomial Naive Bayes.
 \end{itemize}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Industry Research Experience}
-\cventry{Jun,2016 - Present}{Software Engineer}{\textsc{Qube Cinema Technologies, Chennai, India}}{}{}{
+\cventry{Jun,2016 - Present}{Software Engineer}{\textsc{Qube Cinema Technologies, India}}{}{}{
+under by Rajesh Ramachandran, Chief Technology Officer \& President
 \begin{itemize}
-\item Projects: 
+\item \textbf{Projects:} 
 \begin{itemize}
-\item Scalable, \textbf{deep-learned, viewer-demographics mining} (count, age, gender, and emotions of the movie watchers), from low-light images of a theatre's auditorium.
+\item Scalable, \textbf{deep-learned, viewer-demographics mining engine} (count, age, gender, and emotions of the movie watchers), from low-light images of a theatre's auditorium.
 \item Real-time, adaptive, partner \textbf{selection algorithm} for businesses.
 \item \textbf{Intelligent bot for syncing theatre databases} around the globe into a unified format.
 \item \textbf{Video super resolution} of a movie-clipping by up to four times, with minimal loss in clarity.
 \end{itemize}
-\item Techniques and Tools: CNN with master-child model and human-feedback-based learning, Knapsack Problem, Minimum Cost Flow Problem (Transportation Problem), Pruned Search Trees, Linked and Recursive Interval Trees, Generative Adversarial Networks (GAN), Camera Calibration, Amazon Web Services, and Flask+uWSGI+Nginx servers.
+\item \textbf{Techniques and Tools:} CNN with master-child model \& feedback-based learning, Generative Adversarial Networks (GAN), Camera Calibration, Amazon Web Services, Flask+uWSGI+Nginx servers.
+\item \textbf{Algorithms:} Knapsack Problem, Minimum Cost Flow (Transportation) Problem, Pruned Search Trees, Recursive and Linked Interval Trees.
 \end{itemize}}
 
-\cventry{May,2015 - Jul,2015}{Data Scientist - Intern}{\textsc{Serendio Inc., Chennai, India}}{}{}{
+\cventry{May,2015 - Jul,2015}{Data Scientist - Intern}{\textsc{Serendio Inc., India}}{}{}{
+under Ravi Condamoor, Chief Executive Officer
 \begin{itemize}
-\item Projects:
+\item \textbf{Projects:}
 \begin{itemize}
 \item Universal multi-domain \textbf{sentiment scorer} for text  \href{https://github.com/tpsatish95/Universal-MultiDomain-Sentiment-Classifier}{\color{blue!70}{[link]}}.
 \item \textbf{Topic composition modeling} using hierarchical K-Means and semantic word clusters \href{https://github.com/tpsatish95/Topic-Modeling-Social-Network-Text-Data}{\color{blue!70}{[link]}}.
 \item \textbf{Internet slang text parser} \href{https://github.com/tpsatish95/SocialTextFilter}{\color{blue!70}{[link]}}.
 \end{itemize}
-\item Techniques and Tools:  Gensim, Tf-idf features, Bagging and Boosting, CMU ARK's Twokenize, Rake - Keyword Extractor, Web Crawlers, etc.
-\item \textbf{Open Source Community Manager - Intern}, at Serendio Labs, the open source division of Serendio Inc.
+\item \textbf{Techniques and Tools:}  Gensim, Tf-idf features, Bagging and Boosting, CMU ARK's Twokenize, Rake - Keyword Extractor, Web Crawlers, etc.
 \item Serendio Inc.'s \textbf{campus ambassador} at SSN CE.
 \end{itemize}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research Papers, Patents and Theses}
+\cvitem{Feb,2017}{Paper titled, "\textbf{Deep Learning the Indus Script}", submitted to PLoS ONE, arXiv:\href{https://arxiv.org/pdf/1702.00523.pdf}{\color{blue!70}{1702.00523v1}}.}
+
+\cvitem{Apr,2016}{Undergraduate thesis titled, "\textbf{Automated Scenario Description for Images}", Anna University. \href{https://github.com/tpsatish95/image-captioning/blob/master/report.pdf}{\color{blue!70}{[link]}}}
+
+\cvitem{Apr,2015}{Paper titled, "\textbf{Home Automation Systems - A Study}", International Journal of Computer Applications (IJCA), Vol. 116 - No.11, Reference ID: pxc3902601. \href{http://research.ijcaonline.org/volume116/number11/pxc3902601.pdf}{\color{blue!70}{[link]}} \newline
+- \textbf{Best paper award} at the SSN UG paper presentation event and has 13 citations \href{https://scholar.google.co.in/citations?user=gNr8v84AAAAJ&hl=en&oi=ao}{\color{blue!70}{[google scholar]}}.}
+
+\cvitem{Oct,2015}{Patent filed, titled, "\textbf{Universally Compatible and Accessible, Software Controlled, Expandable Home Automation System, for Energy Conservation and the Differently-Abled}", Reference ID: 5729/CHE/2015. \href{https://www.youtube.com/watch?v=O-L_uSHqQvQ}{\color{blue!70}{[video report]}}, \href{http://ipindiaservices.gov.in/PublicSearch/}{[patent search link]}.} 
+
+\cvitem{Apr,2015}{Paper titled, "\textbf{Automated Meter Reading System - A Study}", International Journal of Computer Applications (IJCA), Vol. 116 - No.18, Reference ID: pxc3902783. \href{http://research.ijcaonline.org/volume116/number18/pxc3902783.pdf}{\color{blue!70}{[link]}}}
+
+\cvitem{Dec,2014}{Poster presented, titled, "\textbf{Text Based Emotion Recognition System}", CMU-IPTSE Winter School, at NIT Surathkal. \href{https://github.com/tpsatish95/emotion-detection-from-text/blob/master/docs/poster.jpg}{\color{blue!70}{[link]}}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Projects}
-\cventry{Jun,2015 - Apr,2016}{Automated Scenario Description for Images}{Undergraduate thesis}{\textsc{Anna University}}{}{under Prof. Milton R.S., Department of Computer Science, SSN CE, \href{https://github.com/tpsatish95/image-captioning}{\color{blue!70}{[link]}}.
+\cventry{Jun,2015 - Apr,2016}{Automated Scenario Description for Images}{Undergraduate thesis}{\textsc{Anna University}}{}{under Prof. Milton R.S., Department of Computer Science, SSN CE, \href{https://github.com/tpsatish95/image-captioning}{\color{blue!70}{[link]}}, \href{https://github.com/tpsatish95/image-captioning/blob/master/report.pdf}{\color{blue!70}{[thesis]}}.
 \begin{itemize}
 \item Harnessed object identification and scene classification techniques to automatically generate natural language descriptions of images. 
 \end{itemize}}
 
-\cventry{Feb,2015 - Dec,2015}{Automated Scoring of YouTube videos from Pairwise Comparisons and Metadata based on Degree of Funniness}{Side project}{\href{https://github.com/tpsatish95/Youtube-Comedy-Comparison}{\color{blue!70}{[link]}}}{}{   
+\cventry{Sep,2014 - Jun,2015}{Software Controlled Appliances for Energy Conservation and Differently Abled people}{Funded research project}{\textsc{SSN Innovation Center}}{\href{https://github.com/tpsatish95/home-automation-system}{\color{blue!70}{[link]}}}{ 
 \begin{itemize}
-\item Developed a ranking heuristic based on incomplete pairwise user preferences, using numeric video metadata.
-\item Built a model using Support Vector Regressor and word vector representations to score videos based on textual metadata.
+\item Built a Raspberry Pi powered, adaptive and modular system to provide planet-wide access to electronic appliances using software interfaces (mobile apps) via the Internet cloud. Demonstrating Internet of Things.
 \end{itemize}
 }
 
@@ -150,9 +171,10 @@ under Prof. Bhiksha Raj, Department of Computer Science
 \end{itemize}
 }
 
-\cventry{Sep,2014 - Jun,2015}{Software Controlled Appliances for Energy Conservation and Differently Abled people}{Funded research project}{\textsc{SSN Innovation Center}}{\href{https://github.com/tpsatish95/home-automation-system}{\color{blue!70}{[link]}}}{ 
+\cventry{Feb,2015 - Dec,2015}{Automated Scoring of YouTube videos from Pairwise Comparisons and Metadata based on Degree of Funniness}{Side project}{\href{https://github.com/tpsatish95/Youtube-Comedy-Comparison}{\color{blue!70}{[link]}}}{}{   
 \begin{itemize}
-\item Built a Raspberry Pi powered system to provide planet-wide access to electronic appliances using software interfaces (mobile apps) via the internet cloud (Internet of Things).
+\item Built a regression model, that scores YouTube videos based on their degree of funniness with just the non-video metadata such as title, description, and comments.
+\item Developed a heuristic for converting the pairwise comparisons into unified overall rankings across videos.
 \end{itemize}
 }
 
@@ -161,25 +183,11 @@ under Prof. Bhiksha Raj, Department of Computer Science
 \item Developed a market segmentation algorithm by clustering human activity patterns tracked using smartphone data such as the accelerometer \& gyroscope readings.
 \end{itemize}
 }
-\cventry{Dec,2013}{Regional Transport Office (RTO) Management System}{Software Development Engineer - internship}{\textsc{Ramco Systems, India}}{\href{https://github.com/tpsatish95/misc-projects-and-experiments/tree/master/redundant_databases_ramco_systems}{\color{blue!70}{[link]}}}{
+\cventry{Dec,2013}{Regional Transport Office (RTO) Management System}{Software Development Engineer - Internship}{\textsc{Ramco Systems, India}}{\href{https://github.com/tpsatish95/misc-projects-and-experiments/tree/master/redundant_databases_ramco_systems}{\color{blue!70}{[link]}}}{
 \begin{itemize}
 \item Worked on building and managing fail-safe redundant database systems.
 \item Learned about Enterprise Resource Management (ERP) on cloud.
 \end{itemize}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Research Papers and Patents}
-\cvitem{Feb,2017}{Research paper titled "\textbf{Deep Learning the Indus Script}", arXiv:1702.00523v1 preprint. \href{https://arxiv.org/pdf/1702.00523.pdf}{\color{blue!70}{[link]}}}
-
-\cvitem{Apr,2015}{Paper titled "\textbf{Home Automation Systems - A Study}", International Journal of Computer Applications (IJCA), Vol. 116 - No.11, Reference ID: pxc3902601. \href{http://research.ijcaonline.org/volume116/number11/pxc3902601.pdf}{\color{blue!70}{[link]}} \newline
-- \textbf{Best paper award} at the SSN UG paper presentation event and has 12 citations \href{https://scholar.google.co.in/citations?user=gNr8v84AAAAJ&hl=en&oi=ao}{\color{blue!70}{[Google Scholar]}}.}
-
-\cvitem{Oct,2015}{Patent filed under the title "\textbf{Universally Compatible and Accessible, Software Controlled, Expandable Home Automation System, for Energy Conservation and the Differently-Abled}", Reference ID: 5729/CHE/2015. \href{http://ipindiaservices.gov.in/PublicSearch/}{[patent search link]}}
-
-\cvitem{Apr,2015}{Paper titled "\textbf{Automated Meter Reading System - A Study}", International Journal of Computer Applications (IJCA), Vol. 116 - No.18, Reference ID: pxc3902783. \href{http://research.ijcaonline.org/volume116/number18/pxc3902783.pdf}{\color{blue!70}{[link]}}}
-
-\cvitem{Dec,2014}{Poster presented, titled "\textbf{Text Based Emotion Recognition System}", CMU-IPTSE Winter School, at NIT Surathkal. \href{https://github.com/tpsatish95/emotion-detection-from-text/blob/master/docs/poster.jpg}{\color{blue!70}{[link]}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -197,16 +205,16 @@ under Prof. Bhiksha Raj, Department of Computer Science
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Open source contributions}
+\section{Open Source Contributions}
 \cventry{\textbf{Diskoveror}}{Text analytics package}{}{}{}{ 
 \begin{itemize}
-\item Developed the Topic modeling and Sentiment Analysis modules in Python. \href{https://github.com/serendio-labs-stage/diskoveror-ml-trainer}{\color{blue!70}{[link]}}
-\item Interfaced Python and Java code bases with Facebook's Thrift API. \href{https://github.com/serendio-labs-stage/diskoveror-ta/commits?author=tpsatish95}{\color{blue!70}{[link]}}
+\item Developed the Topic Modeling and Sentiment Analysis modules, in Python. \href{https://github.com/serendio-labs-stage/diskoveror-ml-trainer}{\color{blue!70}{[link]}}
+\item Interfaced Python and Java code bases via Facebook's Thrift API. \href{https://github.com/serendio-labs-stage/diskoveror-ta/commits?author=tpsatish95}{\color{blue!70}{[link]}}
 \end{itemize}
 }
 \cventry{\textbf{RealImage}}{Algorithm for territorial restriction of film distribution rights}{Challenge 2016}{}{}{ 
 \begin{itemize}
-\item Implemented using hash maps, trees and bit indexes with O(1) lookup time complexity. \href{https://github.com/RealImage/challenge2016/pull/6}{\color{blue!70}{[link]}}
+\item Implemented using hash maps, trees, and bit indexes with constant time lookup. \href{https://github.com/RealImage/challenge2016/pull/6}{\color{blue!70}{[link]}}
 \end{itemize}
 }
 \cventry{\textbf{Keras}}{Deep Learning library for Python}{}{}{}{ 
@@ -236,20 +244,22 @@ under Prof. Bhiksha Raj, Department of Computer Science
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Technical Skills}
-\cvitem{Languages}{Python, C, C++, Java, R, VB.Net}
+\cvitem{Languages}{Python, Java, C, C++, VB.Net, R}
 \cvitem{Libraries}{\textsc{Caffe, TensorFlow, Keras, OpenCV}, Scikit-Learn, NLTK}
 \cvitem{Others}{Linux, Android SDK, Git, \LaTeX, Docker, Adobe Photoshop}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Professional Activities}
+\section{Professional Affiliations}
 \cventry{2014 - 2016}{Association for Computing Machinery (ACM)}{Student Chapter}{SSN CE}{}{
 \begin{itemize}
 \item Roles: \textbf{Chairman} (2015 to 2016), \textbf{Treasurer and Tech Lead} (2014 to 2015)
 \end{itemize}}
 
-\cventry{2015 - 2016}{Indian Society for Technical Education (ISTE)}{Vice President, Student Chapter}{SSN CE}{}{}
 \cventry{2014 - 2015}{Google Student Club (GSC)}{Tech Lead}{SSN CE}{}{}
+
+\cventry{2015 - 2016}{Indian Society for Technical Education (ISTE)}{Vice President, Student Chapter}{SSN CE}{}{}
+
 \cventry{2015 - 2016}{Placement Cell}{Student Placement Coordinator, Computer Science Department}{SSN CE}{}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -264,6 +274,17 @@ Prof. Andrew Ng & Prof. Daniel Jurafsky & Dr. Andrej Karpathy \\
 Coursera & Coursera & CS231n
 \end{tabularx}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Standardized Tests}
+\cvitem{\textbf{GRE}}{Score: \textbf{324} / 340
+\newline
+- \textbf{Quantitative:} 169/170, \textbf{Verbal:} 155/170.}
+\
+\cvitem{\textbf{TOEFL}}{Score: \textbf{116} / 120
+\newline
+- \textbf{Reading:} 29/30, \textbf{Listening:} 30/30, \textbf{Speaking:} 28/30, \textbf{Writing:} 29/30.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
